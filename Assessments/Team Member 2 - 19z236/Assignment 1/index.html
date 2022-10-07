@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h3 class="form-heading"> USER REGISTRATION FORM</h3>
+            <form action="success_page.html">
+                <input type="text" name="name" placeholder="Enter Your FullName Here" />
+                <input type="text" name="email" placeholder="Enter Your Email Here" />
+                <input type="password" name="password" placeholder="Enter Your Password Here" />
+                <div class="radio-button-container">
+                    <label for="gender"> Gender : </label>
+                    <div class="radio-button">
+                        <input type="radio" name="gender" value="Male" id="option-1"/>
+                        <label for="option-1"> Male </label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" name="gender" value="Female" id="option-2"/>
+                        <label for="option-2"> Female</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" name="gender" value="Prefer Not To Say" id="option-3"/>
+                        <label for="option-3"> Prefer Not To Say</label>
+                    </div>
+                </div>
+                <div class="textarea">
+                    <h5 class="textarea-heading"> Describe Yourself : </h5>
+                </div>
+                <textarea name="description" placeholder="Describe Yourself">
+                </textarea>
+                <div class="dropdown">
+                    <div class="textarea">
+                        <label for="subscription" class="textarea-heading"> Do You Wish To Subscribe To Our Newsletter : </h5>
+                        
+                    </div>
+                    <select id="subscription" name="Subscription">
+                        <option value="Yes"> Yes </option>
+                        <option value="No"> No </option>
+                    </select>
+                </div>
+                <input type="submit" value="Submit Form" onclick="form_submit()"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

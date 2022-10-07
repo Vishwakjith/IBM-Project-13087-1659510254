@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Successfully Submitted!!</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="success-container">
+        <div class="table-container">
+            <h3 class="success-heading"> FORM SUBMITTED SUCCESSFULLY!!!</h3>
+            <table border="1">
+                <thead>
+                    <th>Form Elements</th>
+                    <th>Values</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name </td>
+                        <td id="Name"></td>
+                    </tr>
+                    <tr>
+                        <td>Email </td>
+                        <td id="Email"></td>
+                    </tr>
+                    <tr>
+                        <td>Password </td>
+                        <td id="Password"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender </td>
+                        <td id="Gender"></td>
+                    </tr>
+                    <tr>
+                        <td>Description </td>
+                        <td id="Description"></td>
+                    </tr>
+                    <tr>
+                        <td>Subscribed to newsletter? </td>
+                        <td id="Subscription"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        var url = window.location.href.toString();
+        //file:///D:/7th%20Semester/PRIEE/GITHUB-REPO/ASSIGNMENT-1/index.html?name=&email=&password=&description=++++++++++++++++&Subscription=Yes
+        url_lst= url.split('&')
+        url_lst[0] = url_lst[0].split('?')[1]
+        console.log(url_lst);
+        count=1;
+        Name = document.getElementById('Name');
+        Email = document.getElementById('Email');
+        Password = document.getElementById('Password');
+        Gender = document.getElementById('Gender');
+        Description = document.getElementById('Description');
+        Subscrption = document.getElementById('Sunscription');
+        url_lst.forEach((ele)=>{
+            ele = ele.split('=');
+            if(count==1){
+                Name.innerHTML = ele[1];
+            }else if(count==2){
+                Email.innerHTML = ele[1];
+            }else if(count==3){
+                Password.innerHTML = ele[1];
+            }else if(count==4){
+                Gender.innerHTML = ele[1];
+            }else if(count==5){
+                Description.innerHTML = ele[1].replaceAll("+","");
+            }else{
+                Subscription.innerHTML = ele[1];
+            }
+            count+=1;
+        });
+    </script>
+</body>
+</html>
