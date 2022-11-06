@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> IBM Log-In Page </title>
+</head>
+<body>
+    <form action="/login" method="POST">
+        
+        <div>
+            <label id="email"> E-Mail: </label>
+            <input type="email" name="userEmail" for="email"/>
+        </div>
+        
+        <div>
+            <label id="pwd"> Password: </label>
+            <input type="password" name="userPassword" for="pwd"/>
+        </div>
+
+        <div>
+            <label id="c_pwd"> Confirm Password: </label>
+            <input type="password" name="confirmPassword" for="c_pwd"/>
+        </div>
+
+        <small id="alr_acc">Already have an account ? <a href="ibm-image.html"> Sign In! </a></small>
+
+        <input type="submit" value="Log-In" style="display: block;">
+
+    </form>
+</body>
+</html>
